@@ -1,11 +1,11 @@
 .el {
   width: 200px;
   height: 50px;
-  margin: auto;
   padding: 10px;
+  margin: auto;
 
   &-child {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
