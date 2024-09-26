@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ElementRef, NgZone} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, NgZone, OnInit} from '@angular/core';
 import {Comp2Component} from "../comp-2/comp-2.component";
 import {Comp12Component} from "./comp-1-2/comp-1-2.component";
 import {Comp11Component} from "./comp-1-1/comp-1-1.component";
@@ -13,17 +13,24 @@ import {Comp11Component} from "./comp-1-1/comp-1-1.component";
   ],
   templateUrl: './comp-1.component.html',
   styleUrl: './comp-1.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default,
+  // changeDetection: ChangeDetectionStrategy.Default,
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Comp1Component {
+export class Comp1Component implements OnInit {
 
   title = 'comp-1'
 
   constructor(private el: ElementRef, private _ngZone: NgZone) {}
+  ngOnInit(): void {
+    // setInterval(() => {
+      
+    // }, 1000)
+  }
 
   onClick(): void {}
   onInput(): void {}
+
+  
 
   changeColor(): void {
     const el = this.el.nativeElement.querySelector('.el')

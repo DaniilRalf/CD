@@ -1,0 +1,10 @@
+{{changeColor()}}
+<div class="el" style="height: 100px">
+  {{title}}
+  <div (click)="onClick()">CLICK</div>
+  <input id="input" [formControl]="numberToStartFactorial" (input)="onInput()">
+
+  <div style="margin-top: 20px;">
+    <div class="truncated-text">Factorial = {{getFactorial(numberToStartFactorial.value || 1)}}</div>
+  </div>
+</div>

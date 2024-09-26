@@ -1,0 +1,18 @@
+.el {
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+
+  &-child {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.truncated-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px; // adjust the width as needed
+}

@@ -6,7 +6,7 @@ import {ChangeDetectionStrategy, Component, ElementRef, NgZone} from '@angular/c
   imports: [],
   templateUrl: './comp-1-2.component.html',
   styleUrl: './comp-1-2.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default,
+  // changeDetection: ChangeDetectionStrategy.Default,
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Comp12Component {

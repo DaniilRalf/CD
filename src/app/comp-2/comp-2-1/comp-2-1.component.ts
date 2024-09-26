@@ -1,13 +1,14 @@
 import {ChangeDetectionStrategy, Component, ElementRef, NgZone} from '@angular/core';
+import { Comp211Component } from './comp-2-1-1/comp-2-1-1.component';
 
 @Component({
   selector: 'app-comp-2-1',
   standalone: true,
-  imports: [],
+  imports: [Comp211Component],
   templateUrl: './comp-2-1.component.html',
   styleUrl: './comp-2-1.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default,
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Comp21Component {
 

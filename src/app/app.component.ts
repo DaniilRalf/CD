@@ -3,14 +3,15 @@ import {CommonModule} from '@angular/common';
 import {RouterOutlet} from '@angular/router';
 import {Comp1Component} from "./comp-1/comp-1.component";
 import {Comp2Component} from "./comp-2/comp-2.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, Comp1Component, Comp2Component],
+  imports: [CommonModule, RouterOutlet, FormsModule, ReactiveFormsModule, Comp1Component, Comp2Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default,
+  // changeDetection: ChangeDetectionStrategy.Default,
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
@@ -23,7 +24,7 @@ export class AppComponent {
   onInput(): void {}
 
   changeColor(): void {
-    console.log('===========')
+    // console.log('===========')
     const el = this.el.nativeElement.querySelector('.el')
     el.style.backgroundColor = `#ff9ba3`
     this.title = '123'
